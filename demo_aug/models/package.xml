@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+  <name>models</name>
+  <version>1.0.0</version>
+  <description>
+    This package contains miscellaneous models copy-pasted by Kevin for the demo aug package.
+  </description>
+  <author email="thankyou@stanford.edu">Kevin Lin</author>
+  <maintainer email="thankyou@stanford.edu">Kevin Lin</maintainer>
+  <license>BSD</license>
+</package>

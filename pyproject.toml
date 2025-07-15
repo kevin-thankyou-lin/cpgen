@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "demo_aug"
+authors = [
+    {name = "Kevin Lin", email="kevin.lin20000@gmail.com"}
+]
+description = "demo_aug: demonstration augmentations for scaling robot learning"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["machine learning"]
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "robomimic @ git+https://github.com/ARISE-Initiative/robomimic.git@9273f9c",  # v0.3.0 w/o needing mujoco_py
+    "gym",
+    "wandb",
+    "tyro",
+    "lxml",
+    "trimesh",
+    "usd-core",  # for curobo
+    "openai"  # for llm demo seg queries
+]
+
+[project.optional-dependencies]
+dev = [
+    "coacd",  # only if doing convex decomposition
+    "patchelf",  # for something in mujoco? only needed if using robomimic/robosuite
+    "xmltodict",
+    "black",
+    "pytorch_kinematics",  # only if using real robots
+    "nerfstudio",  # maybe remove ... for pure cpgen
+    "drake==1.21.0",  # for motion planning
+    "Klampt",  # previously for sampling based motion planning
+    "gsplat",
+    "ipython",
+    "pre-commit",
+    "ruff",
+    "point-cloud-utils", # remove this dependency b/c don't need water tight mesh + License isn't MIT, I think
+]
+
+eval = [
+    "hydra-core",
+    "dill",
+]
+
+[project.urls]
+homepage = "https://github.com/kevin-thankyou-lin/demo-aug"
+repository = "https://github.com/kevin-thankyou-lin/demo-aug"
+documentation = "https://github.com/kevin-thankyou-lin/demo-aug"
+
+[tool.black]
+line-length = 121
+target-version = ["py38", "py39", "py310"]
+preview = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["cache"]
+
+[tool.pyright]
+exclude = [
+    "data",
+    ".git",
+    "wandb",
+]

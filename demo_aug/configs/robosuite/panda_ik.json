@@ -1,0 +1,46 @@
+{
+    "type": "WHOLE_BODY_IK",
+    "composite_controller_specific_configs": {
+        "ref_name": ["gripper0_right_grip_site"],
+        "interpolation": null,
+        "actuation_part_names": ["right"],
+        "max_dq": 4,
+        "nullspace_joint_weights": {
+            "robot0_joint1": 1,
+            "robot0_joint2": 1,
+            "robot0_joint3": 1,
+            "robot0_joint4": 1,
+            "robot0_joint5": 1,
+            "robot0_joint6": 1,
+            "robot0_joint7": 1
+        },
+        "ik_pseudo_inverse_damping": 5e-2,
+        "ik_integration_dt": 1e-1,
+        "ik_max_dq": 4.0,
+        "ik_max_dq_torso": 0.2,
+        "ik_input_type": "absolute",
+        "ik_input_rotation_repr": "axis_angle",
+        "verbose": false
+    },
+    "body_parts": {
+        "arms": {
+            "right": {
+                "type" : "JOINT_POSITION",
+                "input_max": 1,
+                "input_min": -1,
+                "input_type": "absolute",
+                "output_max": 0.5,
+                "output_min": -0.5,
+                "kp": 500,
+                "kd": 20,
+                "velocity_limits": [-1,1],
+                "kp_limits": [0, 300],
+                "interpolation": null,
+                "ramp_ratio": 0.2,
+                "gripper": {
+                    "type": "GRIP"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,173 @@
+<?xml version='1.0'?>
+<sdf xmlns:drake="http://drake.mit.edu" version="1.8">
+  <model name='red_cube-t50-watertight-mesh-convex-decomp0_transformed'>
+    <link name='red_cube-t50-watertight-mesh-convex-decomp0_transformed'>
+      <inertial>
+        <pose>0.04159485555467479 0.012355505084235687 0.8219608828895263 0 0 0</pose>
+        <mass>0.00743576540667996</mass>
+        <inertia>
+          <ixx>1.2969882158640381e-06</ixx>
+          <ixy>-2.575291130656074e-07</ixy>
+          <ixz>6.190619265660477e-09</ixz>
+          <iyy>1.0991634850084472e-06</iyy>
+          <iyz>-2.060434101822905e-08</iyz>
+          <izz>5.992609973663712e-07</izz>
+        </inertia>
+      </inertial>
+      
+      <visual name='visual_1'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp0_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+
+      <visual name='visual_2'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp1_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+
+      <visual name='visual_3'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp2_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+
+      <visual name='visual_4'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp3_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+
+      <visual name='visual_5'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp4_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+
+      <visual name='visual_6'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp5_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+
+      <visual name='visual_7'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp6_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+      
+      <collision name='collision_1'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp0_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+      <collision name='collision_2'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp1_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+      <collision name='collision_3'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp2_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+      <collision name='collision_4'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp3_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+      <collision name='collision_5'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp4_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+      <collision name='collision_6'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp5_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+      <collision name='collision_7'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>red_cube-t50-watertight-mesh-convex-decomp6_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>

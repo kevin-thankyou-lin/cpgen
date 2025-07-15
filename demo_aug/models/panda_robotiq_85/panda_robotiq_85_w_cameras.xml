@@ -1,0 +1,412 @@
+<mujoco model="panda robotiq_85">
+  <compiler angle="radian" meshdir="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/"/>
+  <!-- for now, we use the low textured gripper to be more compatible w.r.t. naming with the default names in robosuite lift -->
+  <!-- should be feasible to use the textured gripper as well, but we need to adjust the names here to match those in the robosuite lift code -->
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+    <default class="panda">
+      <material specular="0.5" shininess="0.25"/>
+      <joint armature="0.1" damping="1" axis="0 0 1" range="-2.8973 2.8973"/>
+      <general dyntype="none" biastype="affine" ctrlrange="-2.8973 2.8973" forcerange="-87 87"/>
+      <default class="finger">
+        <joint axis="0 1 0" type="slide" range="0 0.04"/>
+      </default>
+
+      <default class="panda/visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+      </default>
+      <default class="panda/collision">
+        <geom type="mesh" group="3"/>
+      </default>
+      <site size="0.001" rgba="0.5 0.5 0.5 0.3" group="4"/>
+    </default>
+  </default>
+
+  <asset>
+    <material class="panda" name="white" rgba="1 1 1 1"/>
+    <material class="panda" name="off_white" rgba="0.901961 0.921569 0.929412 1"/>
+    <material class="panda" name="dark_grey" rgba="0.25 0.25 0.25 1"/>
+    <material class="panda" name="green" rgba="0 1 0 1"/>
+    <material class="panda" name="light_blue" rgba="0.039216 0.541176 0.780392 1"/>
+
+    <!-- Collision meshes -->
+    <mesh name="link0_c" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0.stl"/>
+    <mesh name="link1_c" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link1.stl"/>
+    <mesh name="link2_c" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link2.stl"/>
+    <mesh name="link3_c" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link3.stl"/>
+    <mesh name="link4_c" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link4.stl"/>
+    <mesh name="link5_c0" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link5_collision_0.stl"/>
+    <mesh name="link5_c1" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link5_collision_1.stl"/>
+    <mesh name="link5_c2" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link5_collision_2.stl"/>
+    <mesh name="link6_c" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6.stl"/>
+    <mesh name="link7_c" file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link7.stl"/>
+
+    <!-- Visual meshes -->
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_1.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_2.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_3.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_4.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_5.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_7.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_8.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_9.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_10.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link0_11.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link1.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link2.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link3_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link3_1.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link3_2.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link3_3.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link4_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link4_1.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link4_2.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link4_3.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link5_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link5_1.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link5_2.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_1.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_2.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_3.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_4.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_5.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_6.stl"/>
+    <!-- <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_7.stl"/> -->
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_8.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_9.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_10.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_11.stl"/>
+    <!-- <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_12.stl"/> -->
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_13.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_14.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_15.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link6_16.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link7_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link7_1.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link7_2.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link7_3.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link7_4.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link7_5.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link7_6.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/link7_7.stl"/>
+
+    <!-- Camera mount -->
+    <mesh name="hand_camera_part_1" file="/scr/thankyou/autom/demo-aug/demo_aug/models/robotiq_85_description/camera_mount/hand_camera_part_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="hand_camera_part_2" file="/scr/thankyou/autom/demo-aug/demo_aug/models/robotiq_85_description/camera_mount/hand_camera_part_2.stl" scale="0.001 0.001 0.001"/>
+    <!-- add black material for hand camera mesh -->
+    <material name="hand_camera_part_1_Material_001" specular="0.5" shininess="0.25" rgba="0.000000 0.000000 0.000000 1.000000"/>
+    <material name="hand_camera_part_2_Material_001" specular="0.5" shininess="0.25" rgba="0.000000 0.000000 0.000000 1.000000"/>
+
+    <!-- Gripper -->
+    <mesh name="gripper0_robotiq_arg2f_base_link" file="/scr/thankyou/autom/robosuite/robosuite/models/assets/grippers/meshes/robotiq_85_gripper/robotiq_arg2f_base_link.stl" />
+    <mesh name="gripper0_robotiq_arg2f_85_outer_knuckle" file="/scr/thankyou/autom/robosuite/robosuite/models/assets/grippers/meshes/robotiq_85_gripper/robotiq_arg2f_85_outer_knuckle.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_outer_finger" file="/scr/thankyou/autom/robosuite/robosuite/models/assets/grippers/meshes/robotiq_85_gripper/robotiq_arg2f_85_outer_finger.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_inner_finger" file="/scr/thankyou/autom/robosuite/robosuite/models/assets/grippers/meshes/robotiq_85_gripper/robotiq_arg2f_85_inner_finger.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_inner_knuckle" file="/scr/thankyou/autom/robosuite/robosuite/models/assets/grippers/meshes/robotiq_85_gripper/robotiq_arg2f_85_inner_knuckle.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_outer_knuckle_vis" file="/scr/thankyou/autom/robosuite/robosuite/models/assets/grippers/meshes/robotiq_85_gripper/robotiq_arg2f_85_outer_knuckle_vis.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_outer_finger_vis" file="/scr/thankyou/autom/robosuite/robosuite/models/assets/grippers/meshes/robotiq_85_gripper/robotiq_arg2f_85_outer_finger_vis.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_inner_finger_vis" file="/scr/thankyou/autom/robosuite/robosuite/models/assets/grippers/meshes/robotiq_85_gripper/robotiq_arg2f_85_inner_finger_vis.stl" scale="0.001 0.001 0.001" />
+    <mesh name="gripper0_robotiq_arg2f_85_inner_knuckle_vis" file="/scr/thankyou/autom/robosuite/robosuite/models/assets/grippers/meshes/robotiq_85_gripper/robotiq_arg2f_85_inner_knuckle_vis.stl" scale="0.001 0.001 0.001" />
+
+    <!-- newer stuff -->
+    <material name="robotiq_85_base_link_Material_001" specular="0.5" shininess="0.25" rgba="0.039639 0.039639 0.039639 1.000000"/>
+    <material name="robotiq_85_base_link_Material_002" specular="0.5" shininess="0.25" rgba="0.640000 0.640000 0.640000 1.000000"/>
+    <material name="robotiq_85_base_link_Material_003" specular="0.5" shininess="0.25" rgba="0.440000 0.440000 0.440000 1.000000"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_base_link_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_base_link_1.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_base_link_2.stl"/>
+
+    <material name="robotiq_85_knuckle_link_Material_001" specular="0.5" shininess="0.25" rgba="0.040000 0.040000 0.040000 1.000000"/>
+    <material name="robotiq_85_knuckle_link_Material_002" specular="0.5" shininess="0.25" rgba="0.440000 0.440000 0.440000 1.000000"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_knuckle_link_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_knuckle_link_1.stl"/>
+
+    <material name="robotiq_85_finger_link_Material" specular="0.5" shininess="0.25" rgba="0.040000 0.040000 0.040000 1.000000"/>
+    <material name="robotiq_85_finger_link_Material_004" specular="0.5" shininess="0.25" rgba="0.440000 0.440000 0.440000 1.000000"/>
+    <material name="robotiq_85_finger_link_Material_005" specular="0.5" shininess="0.25" rgba="0.240000 0.240000 0.240000 1.000000"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_finger_link_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_finger_link_1.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_finger_link_2.stl"/>
+
+    <material name="robotiq_85_inner_knuckle_link_Material" specular="0.5" shininess="0.25" rgba="0.040000 0.040000 0.040000 1.000000"/>
+    <material name="robotiq_85_inner_knuckle_link_Material_003" specular="0.5" shininess="0.25" rgba="0.440000 0.440000 0.440000 1.000000"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_inner_knuckle_link_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_inner_knuckle_link_1.stl"/>
+
+    <material name="robotiq_85_finger_tip_link_Material_003" specular="0.5" shininess="0.25" rgba="0.040000 0.040000 0.040000 1.000000"/>
+    <material name="robotiq_85_finger_tip_link_Material_004" specular="0.5" shininess="0.25" rgba="0.440000 0.440000 0.440000 1.000000"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_finger_tip_link_0.stl"/>
+    <mesh file="/scr/thankyou/autom/demo-aug/demo_aug/models/panda_robotiq_85/assets/robotiq_85_finger_tip_link_1.stl"/>
+  </asset>
+
+  <worldbody>
+    <light name="top" pos="0 0 2" mode="trackcom"/>
+    <!-- <camera mode="fixed" name="27432424_left" pos="0.1946723527791488 -0.42610897205557197 0.4304268265555512" quat="0.7826180975611038 0.5625120734850436 -0.1441474008438781 -0.22430026166580733" fovy="68.94"/> -->
+    <camera mode="fixed" name="27432424_left" pos="0.10374 -0.27060 0.39681" quat="0.80780 0.37618 -0.20766 -0.40352" fovy="68.94"/>
+    <body name="robot0_base" childclass="panda">
+      <inertial mass="0.629769" pos="-0.041018 -0.00014 0.049974"
+        fullinertia="0.00315 0.00388 0.004285 8.2904e-7 0.00015 8.2299e-6"/>
+      <geom mesh="link0_0" material="off_white" class="panda/visual"/>
+      <geom mesh="link0_1" material="dark_grey" class="panda/visual"/>
+      <geom mesh="link0_2" material="off_white" class="panda/visual"/>
+      <geom mesh="link0_3" material="dark_grey" class="panda/visual"/>
+      <geom mesh="link0_4" material="off_white" class="panda/visual"/>
+      <geom mesh="link0_5" material="dark_grey" class="panda/visual"/>
+      <geom mesh="link0_7" material="white" class="panda/visual"/>
+      <geom mesh="link0_8" material="white" class="panda/visual"/>
+      <geom mesh="link0_9" material="dark_grey" class="panda/visual"/>
+      <geom mesh="link0_10" material="off_white" class="panda/visual"/>
+      <geom mesh="link0_11" material="white" class="panda/visual"/>
+      <geom mesh="link0_c" class="panda/collision"/>
+      <body name="link1" pos="0 0 0.333">
+        <inertial mass="4.970684" pos="0.003875 0.002081 -0.04762"
+          fullinertia="0.70337 0.70661 0.0091170 -0.00013900 0.0067720 0.019169"/>
+        <joint name="robot0_joint1"/>
+        <geom material="white" mesh="link1" class="panda/visual"/>
+        <geom mesh="link1_c" class="panda/collision"/>
+        <body name="link2" quat="1 -1 0 0">
+          <inertial mass="0.646926" pos="-0.003141 -0.02872 0.003495"
+            fullinertia="0.0079620 2.8110e-2 2.5995e-2 -3.925e-3 1.0254e-2 7.04e-4"/>
+          <joint name="robot0_joint2" range="-1.7628 1.7628"/>
+          <geom material="white" mesh="link2" class="panda/visual"/>
+          <geom mesh="link2_c" class="panda/collision"/>
+          <body name="link3" pos="0 -0.316 0" quat="1 1 0 0">
+            <joint name="robot0_joint3"/>
+            <inertial mass="3.228604" pos="2.7518e-2 3.9252e-2 -6.6502e-2"
+              fullinertia="3.7242e-2 3.6155e-2 1.083e-2 -4.761e-3 -1.1396e-2 -1.2805e-2"/>
+            <geom mesh="link3_0" material="white" class="panda/visual"/>
+            <geom mesh="link3_1" material="white" class="panda/visual"/>
+            <geom mesh="link3_2" material="white" class="panda/visual"/>
+            <geom mesh="link3_3" material="dark_grey" class="panda/visual"/>
+            <geom mesh="link3_c" class="panda/collision"/>
+            <body name="link4" pos="0.0825 0 0" quat="1 1 0 0">
+              <inertial mass="3.587895" pos="-5.317e-2 1.04419e-1 2.7454e-2"
+                fullinertia="2.5853e-2 1.9552e-2 2.8323e-2 7.796e-3 -1.332e-3 8.641e-3"/>
+              <joint name="robot0_joint4" range="-3.0718 -0.0698"/>
+              <geom mesh="link4_0" material="white" class="panda/visual"/>
+              <geom mesh="link4_1" material="white" class="panda/visual"/>
+              <geom mesh="link4_2" material="dark_grey" class="panda/visual"/>
+              <geom mesh="link4_3" material="white" class="panda/visual"/>
+              <geom mesh="link4_c" class="panda/collision"/>
+              <body name="link5" pos="-0.0825 0.384 0" quat="1 -1 0 0">
+                <inertial mass="1.225946" pos="-1.1953e-2 4.1065e-2 -3.8437e-2"
+                  fullinertia="3.5549e-2 2.9474e-2 8.627e-3 -2.117e-3 -4.037e-3 2.29e-4"/>
+                <joint name="robot0_joint5"/>
+                <geom mesh="link5_0" material="dark_grey" class="panda/visual"/>
+                <geom mesh="link5_1" material="white" class="panda/visual"/>
+                <geom mesh="link5_2" material="white" class="panda/visual"/>
+                <geom mesh="link5_c0" class="panda/collision"/>
+                <geom mesh="link5_c1" class="panda/collision"/>
+                <geom mesh="link5_c2" class="panda/collision"/>
+                <body name="link6" quat="1 1 0 0">
+                  <inertial mass="1.666555" pos="6.0149e-2 -1.4117e-2 -1.0517e-2"
+                    fullinertia="1.964e-3 4.354e-3 5.433e-3 1.09e-4 -1.158e-3 3.41e-4"/>
+                  <joint name="robot0_joint6" range="-0.0175 3.7525"/>
+                  <geom mesh="link6_0" material="off_white" class="panda/visual"/>
+                  <geom mesh="link6_1" material="white" class="panda/visual"/>
+                  <geom mesh="link6_2" material="dark_grey" class="panda/visual"/>
+                  <geom mesh="link6_3" material="white" class="panda/visual"/>
+                  <geom mesh="link6_4" material="white" class="panda/visual"/>
+                  <geom mesh="link6_5" material="white" class="panda/visual"/>
+                  <geom mesh="link6_6" material="white" class="panda/visual"/>
+                  <!-- <geom mesh="link6_7" material="light_blue" class="panda/visual"/> -->
+                  <geom mesh="link6_8" material="light_blue" class="panda/visual"/>
+                  <geom mesh="link6_9" material="dark_grey" class="panda/visual"/>
+                  <geom mesh="link6_10" material="dark_grey" class="panda/visual"/>
+                  <geom mesh="link6_11" material="white" class="panda/visual"/>
+                  <!-- <geom mesh="link6_12" material="green" class="panda/visual"/> -->
+                  <geom mesh="link6_13" material="white" class="panda/visual"/>
+                  <geom mesh="link6_14" material="dark_grey" class="panda/visual"/>
+                  <geom mesh="link6_15" material="dark_grey" class="panda/visual"/>
+                  <geom mesh="link6_16" material="white" class="panda/visual"/>
+                  <geom mesh="link6_c" class="panda/collision"/>
+                  <body name="link7" pos="0.088 0 0" quat="1 1 0 0">
+                    <inertial mass="7.35522e-01" pos="1.0517e-2 -4.252e-3 6.1597e-2"
+                      fullinertia="1.2516e-2 1.0027e-2 4.815e-3 -4.28e-4 -1.196e-3 -7.41e-4"/>
+                    <joint name="robot0_joint7"/>
+                    <geom mesh="link7_0" material="white" class="panda/visual"/>
+                    <geom mesh="link7_1" material="dark_grey" class="panda/visual"/>
+                    <geom mesh="link7_2" material="dark_grey" class="panda/visual"/>
+                    <geom mesh="link7_3" material="dark_grey" class="panda/visual"/>
+                    <geom mesh="link7_4" material="dark_grey" class="panda/visual"/>
+                    <geom mesh="link7_5" material="dark_grey" class="panda/visual"/>
+                    <geom mesh="link7_6" material="dark_grey" class="panda/visual"/>
+                    <geom mesh="link7_7" material="white" class="panda/visual"/>
+                    <geom mesh="link7_c" class="panda/collision"/>
+                    <body name="robot0_right_hand" pos="0 0 0.107" quat="1 0 0 0">
+                          <body name="camera_mount" pos="0 0 0.0">
+                            <!-- without manual (randomly) inertial values, get error: body mass is too small, cannot compute center of mass -->
+                            <inertial pos="0 0 0" mass="0.01" diaginertia="0.001 0.001 0.001" />
+                            <geom pos="-5.30718e-08 -0.32 -0.009" quat="1.32679e-06 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hand_camera_part_1" material="hand_camera_part_1_Material_001"/>
+                            <geom pos="5.30718e-08 -0.28 -0.009" quat="1.32679e-06 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hand_camera_part_2" material="hand_camera_part_2_Material_001"/>
+                          </body>
+                          <!-- <camera mode="fixed" name="12391924_left" pos="-0.07496 0.03376 0.01352" quat="-0.11192 -0.69220 0.70121 0.12898" fovy="52.409042906351495" /> -->
+                          <camera mode="fixed" name="12391924_left" pos="-0.07496 0.03376 0.01352" quat="0.692201 -0.111915  0.128984 -0.70121" fovy="52.409042906351495" />
+                          <site name="robot0_ee" pos="0 0 0" size="0.01" group="1" rgba="0 0 1 1" />
+                          <site name="robot0_ee_x" pos="0 0 0" quat="0.707105 0.707108 0 0" size="0.005 0.1" group="1" type="cylinder" rgba="1 0 0 0" />
+                          <site name="robot0_ee_z" pos="0 0 0" quat="0.707105 0 0 0.707108" size="0.005 0.1" group="1" type="cylinder" rgba="0 0 1 0" />
+                          <site name="robot0_ee_y" pos="0 0 0" quat="0.707105 0 0.707108 0" size="0.005 0.1" group="1" type="cylinder" rgba="0 1 0 0" />
+                          <!-- measuring stick -->
+                          <!-- full length from 'base' of robot gripper to gripper is ~16.6cm -->
+                          <geom type="cylinder" size="0.005 0.0835" pos="0.01 0.04 0.075" quat="1 0 0 0" rgba="1 1 0 1"/>
+                          <!-- <geom type="cylinder" size="0.005 0.0835" pos="0.075 0.085 0.05" quat="1 0 0 0" rgba="1 1 0 1"/> -->
+                          <!-- solution is to add ~0.01 in distance -->
+                          <body name="gripper0_robotiq_85_adapter_link" pos="0 0 0.01">
+                          <inertial pos="0 0 0" mass="0.01" diaginertia="0.001 0.001 0.001" />
+                          <geom name="gripper0_hand_visual" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" mesh="gripper0_robotiq_arg2f_base_link" />
+                          <geom name="gripper0_hand_collision" type="mesh" rgba="0 0 0.5 1" mesh="gripper0_robotiq_arg2f_base_link" />
+                          <site name="gripper0_ft_frame" pos="0 0 0" size="0.01" group="1" rgba="1 0 0 1" />
+                          <site name="gripper0_grip_site" pos="0 0 0.145" size="0.01" group="1" rgba="1 0 0 0.5" />
+                          <site name="gripper0_grip_site_cylinder" pos="0 0 0.145" size="0.005 10" group="1" type="cylinder" rgba="0 1 0 0.3" />
+                          <body name="gripper0_left_outer_knuckle" pos="0 -0.0306011 0.054904" quat="0 0 0 1">
+                              <inertial pos="0.000163875 0.0554825 -0.0100755" quat="0.920541 0.390623 -0.00362953 0.00231744" mass="0.0311462" diaginertia="5.11372e-05 4.89464e-05 4.95906e-06" />
+                              <joint name="gripper0_finger_joint" pos="0 0 0" axis="1 0 0" limited="true" range="0 0.8" />
+                              <geom name="gripper0_left_outer_knuckle_visual" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="gripper0_robotiq_arg2f_85_outer_knuckle_vis" />
+                              <geom name="gripper0_left_outer_knuckle_collision" type="mesh" solref="0.01 0.25" rgba="0 0 0.5 1" mesh="gripper0_robotiq_arg2f_85_outer_knuckle" />
+                              <geom name="gripper0_left_outer_finger_visual" pos="0 0.0315 -0.0041" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" mesh="gripper0_robotiq_arg2f_85_outer_finger_vis" />
+                              <geom name="gripper0_left_outer_finger_collision" pos="0 0.0315 -0.0041" type="mesh" solref="0.01 0.25" rgba="0 0 0.5 1" mesh="gripper0_robotiq_arg2f_85_outer_finger" />
+                              <body name="gripper0_left_inner_finger" pos="0 0.0376 0.043">
+                                  <inertial pos="0.000199506 0.0032692 0.00175282" quat="0.933621 0.35825 -0.00273441 0.00104851" mass="0.0156391" diaginertia="1.57977e-05 1.51089e-05 1.4647e-06" />
+                                  <joint name="gripper0_left_inner_finger_joint" pos="0 0 0" axis="1 0 0" limited="true" range="-0.8757 0.8757" />
+                                  <geom name="gripper0_left_inner_finger_visual" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" mesh="gripper0_robotiq_arg2f_85_inner_finger_vis" />
+                                  <geom name="gripper0_left_inner_finger_collision" type="mesh" solref="0.01 0.25" rgba="0 0 0.5 1" mesh="gripper0_robotiq_arg2f_85_inner_finger" />
+                                  <geom name="gripper0_left_fingertip_visual" size="0.011 0.003175 0.01875" pos="0 -0.0220203 0.03242" type="box" contype="0" conaffinity="0" group="1" rgba="0.9 0.9 0.9 1" />
+                                  <geom name="gripper0_left_fingertip_collision" size="0.011 0.003175 0.01875" pos="0 -0.0220203 0.03242" type="box" solref="0.01 0.25" rgba="0 0 0.5 1" />
+                                  <geom name="gripper0_left_fingerpad_collision" size="0.01 0.001 0.01675" pos="0 -0.0245203 0.03242" type="box" rgba="0 0 0.5 1" />
+                              </body>
+                          </body>
+                          <body name="gripper0_left_inner_knuckle" pos="0 -0.0127 0.06142" quat="0 0 0 1">
+                              <inertial pos="0.000123012 0.0507851 0.00103969" quat="0.497203 0.502496 -0.507943 0.492221" mass="0.0271177" diaginertia="2.83809e-05 2.61936e-05 2.81319e-06" />
+                              <joint name="gripper0_left_inner_knuckle_joint" pos="0 0 0" axis="1 0 0" limited="true" range="0 0.8757" />
+                              <geom name="gripper0_left_inner_knuckle_visual" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" mesh="gripper0_robotiq_arg2f_85_inner_knuckle_vis" />
+                              <geom name="gripper0_left_inner_knuckle_collision" type="mesh" rgba="0 0 0.5 1" mesh="gripper0_robotiq_arg2f_85_inner_knuckle" />
+                          </body>
+                          <body name="gripper0_right_outer_knuckle" pos="0 0.0306011 0.054904">
+                              <inertial pos="0.000163875 0.0554825 -0.0100755" quat="0.920541 0.390623 -0.00362953 0.00231744" mass="0.0311462" diaginertia="5.11372e-05 4.89464e-05 4.95906e-06" />
+                              <joint name="gripper0_right_outer_knuckle_joint" pos="0 0 0" axis="1 0 0" limited="true" range="0 0.8" />
+                              <geom name="gripper0_right_outer_knuckle_visual" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="gripper0_robotiq_arg2f_85_outer_knuckle_vis" />
+                              <geom name="gripper0_right_outer_knuckle_collision" type="mesh" solref="0.01 0.25" rgba="0 0 0.5 1" mesh="gripper0_robotiq_arg2f_85_outer_knuckle" />
+                              <geom name="gripper0_right_outer_finger_visual" pos="0 0.0315 -0.0041" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" mesh="gripper0_robotiq_arg2f_85_outer_finger_vis" />
+                              <geom name="gripper0_right_outer_finger_collision" pos="0 0.0315 -0.0041" type="mesh" solref="0.01 0.25" rgba="0 0 0.5 1" mesh="gripper0_robotiq_arg2f_85_outer_finger" />
+                              <body name="gripper0_right_inner_finger" pos="0 0.0376 0.043">
+                                  <inertial pos="0.000199506 0.0032692 0.00175282" quat="0.933621 0.35825 -0.00273441 0.00104851" mass="0.0156391" diaginertia="1.57977e-05 1.51089e-05 1.4647e-06" />
+                                  <joint name="gripper0_right_inner_finger_joint" pos="0 0 0" axis="1 0 0" limited="true" range="-0.8757 0.8757" />
+                                  <geom name="gripper0_right_inner_finger_visual" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" mesh="gripper0_robotiq_arg2f_85_inner_finger_vis" />
+                                  <geom name="gripper0_right_inner_finger_collision" type="mesh" solref="0.01 0.25" rgba="0 0 0.5 1" mesh="gripper0_robotiq_arg2f_85_inner_finger" />
+                                  <geom name="gripper0_right_fingertip_visual" size="0.011 0.003175 0.01875" pos="0 -0.0220203 0.03242" type="box" contype="0" conaffinity="0" group="1" rgba="0.9 0.9 0.9 1" />
+                                  <geom name="gripper0_right_fingertip_collision" size="0.011 0.003175 0.01875" pos="0 -0.0220203 0.03242" type="box" solref="0.01 0.25" rgba="0 0 0.5 1" />
+                                  <geom name="gripper0_right_fingerpad_collision" size="0.01 0.001 0.01675" pos="0 -0.0245203 0.03242" type="box" rgba="0 0 0.5 1" />
+                              </body>
+                          </body>
+                          <body name="gripper0_right_inner_knuckle" pos="0 0.0127 0.06142">
+                              <inertial pos="0.000123012 0.0507851 0.00103969" quat="0.497203 0.502496 -0.507943 0.492221" mass="0.0271177" diaginertia="2.83809e-05 2.61936e-05 2.81319e-06" />
+                              <joint name="gripper0_right_inner_knuckle_joint" pos="0 0 0" axis="1 0 0" limited="true" range="0 0.8757" />
+                              <geom name="gripper0_right_inner_knuckle_visual" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.1 0.1 0.1 1" mesh="gripper0_robotiq_arg2f_85_inner_knuckle_vis" />
+                              <geom name="gripper0_right_inner_knuckle_collision" type="mesh" rgba="0 0 0.5 1" mesh="gripper0_robotiq_arg2f_85_inner_knuckle" />
+                          </body>
+                      </body>
+                          <!-- commenting out new texture robotiq gripper for now -->
+                          <!-- <body name="robotiq_85_base_link" pos="0 0 0" quat="0 1 0 0">
+                            <geom mesh="robotiq_85_base_link_0" material="robotiq_85_base_link_Material_003" class="visual"/>
+                            <geom mesh="robotiq_85_base_link_1" material="robotiq_85_base_link_Material_002" class="visual"/>
+                            <geom mesh="robotiq_85_base_link_2" material="robotiq_85_base_link_Material_001" class="visual"/>
+                            <geom mesh="robotiq_85_base_link_0" class="collision"/>
+                            <geom mesh="robotiq_85_base_link_1" class="collision"/>
+                            <geom mesh="robotiq_85_base_link_2" class="collision"/>
+                            <body name="robotiq_85_left_knuckle_link" pos="0.0549045 0.0306011 0" quat="0 1 0 0">
+                              <inertial pos="-0.00243606 -0.0187741 0" quat="0.647436 0.284299 -0.647436 0.284299" mass="0.0458" diaginertia="4.11145e-05 2.69913e-05 1.81232e-05"/>
+                              <joint name="gripper0_finger_joint" pos="0 0 0" axis="0 0 1" limited="true" range="0 0.804"/>
+                              <geom mesh="robotiq_85_knuckle_link_0" material="robotiq_85_knuckle_link_Material_002" class="visual"/>
+                              <geom mesh="robotiq_85_knuckle_link_1" material="robotiq_85_knuckle_link_Material_001" class="visual"/>
+                              <geom mesh="robotiq_85_knuckle_link_0" class="collision"/>
+                              <geom mesh="robotiq_85_knuckle_link_1" class="collision"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_0" material="robotiq_85_finger_link_Material_005" class="visual"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_1" material="robotiq_85_finger_link_Material_004" class="visual"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_2" material="robotiq_85_finger_link_Material" class="visual"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_0" class="collision"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_1" class="collision"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_2" class="collision"/>
+                            </body>
+                            <body name="robotiq_85_right_knuckle_link" pos="0.0549045 -0.0306011 0">
+                              <inertial pos="-0.00243606 -0.0187741 0" quat="0.647436 0.284299 -0.647436 0.284299" mass="0.0458" diaginertia="4.11145e-05 2.69913e-05 1.81232e-05"/>
+                              <joint name="gripper0_robotiq_85_right_knuckle_joint" pos="0 0 0" axis="0 0 1" limited="true" range="-3.14 3.14"/>
+                              <geom mesh="robotiq_85_knuckle_link_0" material="robotiq_85_knuckle_link_Material_002" class="visual"/>
+                              <geom mesh="robotiq_85_knuckle_link_1" material="robotiq_85_knuckle_link_Material_001" class="visual"/>
+                              <geom mesh="robotiq_85_knuckle_link_0" class="collision"/>
+                              <geom mesh="robotiq_85_knuckle_link_1" class="collision"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_0" material="robotiq_85_finger_link_Material_005" class="visual"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_1" material="robotiq_85_finger_link_Material_004" class="visual"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_2" material="robotiq_85_finger_link_Material" class="visual"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_0" class="collision"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_1" class="collision"/>
+                              <geom pos="-0.00408552 -0.031486 0" mesh="robotiq_85_finger_link_2" class="collision"/>
+                            </body>
+                            <body name="robotiq_85_left_inner_knuckle_link" pos="0.06142 0.0127 0" quat="0 1 0 0">
+                              <inertial pos="0 0 0" quat="0.707107 0.707107 0 0" mass="0.029951" diaginertia="3.9e-05 3.5e-05 5e-06"/>
+                              <joint name="gripper0_robotiq_85_left_inner_knuckle_joint" pos="0 0 0" axis="0 0 1" limited="true" range="-3.14 3.14"/>
+                              <geom mesh="robotiq_85_inner_knuckle_link_0" material="robotiq_85_inner_knuckle_link_Material_003" class="visual"/>
+                              <geom mesh="robotiq_85_inner_knuckle_link_1" material="robotiq_85_inner_knuckle_link_Material" class="visual"/>
+                              <geom mesh="robotiq_85_inner_knuckle_link_0" class="collision"/>
+                              <geom mesh="robotiq_85_inner_knuckle_link_1" class="collision"/>
+                              <body name="robotiq_85_left_finger_tip_link" pos="0.0430396 -0.0375994 0">
+                                <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="0.019555" diaginertia="6e-06 5e-06 2e-06"/>
+                                <joint name="gripper0_robotiq_85_left_finger_tip_joint" pos="0 0 0" axis="0 0 1" limited="true" range="-3.14 3.14"/>
+                                <geom mesh="robotiq_85_finger_tip_link_0" material="robotiq_85_finger_tip_link_Material_004" class="visual"/>
+                                <geom mesh="robotiq_85_finger_tip_link_1" material="robotiq_85_finger_tip_link_Material_003" class="visual"/>
+                                <geom mesh="robotiq_85_finger_tip_link_0" class="collision"/>
+                                <geom mesh="robotiq_85_finger_tip_link_1" class="collision"/>
+                              </body>
+                            </body>
+                            <body name="robotiq_85_right_inner_knuckle_link" pos="0.06142 -0.0127 0">
+                              <inertial pos="0 0 0" quat="0.707107 0.707107 0 0" mass="0.029951" diaginertia="3.9e-05 3.5e-05 5e-06"/>
+                              <joint name="gripper0_robotiq_85_right_inner_knuckle_joint" pos="0 0 0" axis="0 0 1" limited="true" range="-3.14 3.14"/>
+                              <geom mesh="robotiq_85_inner_knuckle_link_0" material="robotiq_85_inner_knuckle_link_Material_003" class="visual"/>
+                              <geom mesh="robotiq_85_inner_knuckle_link_1" material="robotiq_85_inner_knuckle_link_Material" class="visual"/>
+                              <geom mesh="robotiq_85_inner_knuckle_link_0" class="collision"/>
+                              <geom mesh="robotiq_85_inner_knuckle_link_1" class="collision"/>
+                              <body name="robotiq_85_right_finger_tip_link" pos="0.0430396 -0.0375994 0">
+                                <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="0.019555" diaginertia="6e-06 5e-06 2e-06"/>
+                                <joint name="gripper0_robotiq_85_right_finger_tip_joint" pos="0 0 0" axis="0 0 1" limited="true" range="-3.14 3.14"/>
+                                <geom mesh="robotiq_85_finger_tip_link_0" material="robotiq_85_finger_tip_link_Material_004" class="visual"/>
+                                <geom mesh="robotiq_85_finger_tip_link_1" material="robotiq_85_finger_tip_link_Material_003" class="visual"/>
+                                <geom mesh="robotiq_85_finger_tip_link_0" class="collision"/>
+                                <geom mesh="robotiq_85_finger_tip_link_1" class="collision"/>
+                              </body>
+                            </body>
+                            </body> -->
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="cube_main" pos="0 0 0">
+        <inertial pos="0 0 0" mass="0.0743781" diaginertia="2.16306e-05 2.16224e-05 2.25755e-05" />
+        <joint name="cube_joint0" type="free" />
+        <geom name="cube_g0" size="0.0213335 0.0213413 0.0204208" type="box" rgba="0.5 0 0 1" />
+        <site name="cube_default_site" pos="0 0 0" size="0.002" rgba="1 0 0 1" />
+    </body>
+  </worldbody>
+  <actuator>
+      <general name="robot0_torq_j1" joint="robot0_joint1" ctrllimited="true" ctrlrange="-80 80" />
+      <general name="robot0_torq_j2" joint="robot0_joint2" ctrllimited="true" ctrlrange="-80 80" />
+      <general name="robot0_torq_j3" joint="robot0_joint3" ctrllimited="true" ctrlrange="-80 80" />
+      <general name="robot0_torq_j4" joint="robot0_joint4" ctrllimited="true" ctrlrange="-80 80" />
+      <general name="robot0_torq_j5" joint="robot0_joint5" ctrllimited="true" ctrlrange="-80 80" />
+      <general name="robot0_torq_j6" joint="robot0_joint6" ctrllimited="true" ctrlrange="-12 12" />
+      <general name="robot0_torq_j7" joint="robot0_joint7" ctrllimited="true" ctrlrange="-12 12" />
+
+      <general name="gripper0_finger_1" joint="gripper0_finger_joint" ctrllimited="true" ctrlrange="0 0.8" biastype="affine" gainprm="20 0 0 0 0 0 0 0 0 0" biasprm="0 -20 0 0 0 0 0 0 0 0" />
+      <general name="gripper0_finger_2" joint="gripper0_right_outer_knuckle_joint" ctrllimited="true" ctrlrange="0 0.8" biastype="affine" gainprm="20 0 0 0 0 0 0 0 0 0" biasprm="0 -20 0 0 0 0 0 0 0 0" />
+  </actuator>
+</mujoco>

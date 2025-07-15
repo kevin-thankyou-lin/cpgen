@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<robot name="full-mount-new" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find full-mount-new_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find full-mount-new_description)/urdf/full-mount-new.trans" />
+<xacro:include filename="$(find full-mount-new_description)/urdf/full-mount-new.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0009999999999998784 0.01000150012969967 0.005529238640910319" rpy="0 0 0"/>
+    <mass value="0.1728737645704242"/>
+    <inertia ixx="0.000274" iyy="0.000273" izz="0.000544" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="/c/Users/thankyou/autom/demo-aug/models/full-mount-new_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="/c/Users/thankyou/autom/demo-aug/models/full-mount-new_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera-mount-slider-base.f3d_v1_1">
+  <inertial>
+    <origin xyz="0.0010313472342400529 -0.017887052681550414 0.0183644905185133" rpy="0 0 0"/>
+    <mass value="0.012954122548799038"/>
+    <inertia ixx="4e-06" iyy="2e-06" izz="2e-06" ixy="-0.0" iyz="2e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.018472 0.05412 -0.01025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="/c/Users/thankyou/autom/demo-aug/models/full-mount-new_description/meshes/camera-mount-slider-base.f3d_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.018472 0.05412 -0.01025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="/c/Users/thankyou/autom/demo-aug/models/full-mount-new_description/meshes/camera-mount-slider-base.f3d_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera-mount-slider_1">
+  <inertial>
+    <origin xyz="0.001314255649585358 0.018300018348111374 -0.0026028854037946705" rpy="0 0 0"/>
+    <mass value="0.013141632695650938"/>
+    <inertia ixx="4e-06" iyy="2e-06" izz="2e-06" ixy="-0.0" iyz="2e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.022851 0.110916 -0.050749" rpy="0 0 0"/>
+    <geometry name="camera-mount-slider">
+      <mesh filename="/c/Users/thankyou/autom/demo-aug/models/full-mount-new_description/meshes/camera-mount-slider_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.022851 0.110916 -0.050749" rpy="0 0 0"/>
+    <geometry name="camera-mount-slider-vis">
+      <mesh filename="/c/Users/thankyou/autom/demo-aug/models/full-mount-new_description/meshes/camera-mount-slider_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera-mount-cam-holder_1">
+  <inertial>
+    <origin xyz="0.003423269828836655 -0.005856468897799061 0.009575661241026406" rpy="0 0 0"/>
+    <mass value="0.008130563565877349"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.029666 0.110376 -0.066017" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="/c/Users/thankyou/autom/demo-aug/models/full-mount-new_description/meshes/camera-mount-cam-holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.029666 0.110376 -0.066017" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="/c/Users/thankyou/autom/demo-aug/models/full-mount-new_description/meshes/camera-mount-cam-holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 1" type="revolute">
+  <origin xyz="-0.018472 -0.05412 0.01025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera-mount-slider-base.f3d_v1_1"/>
+  <axis xyz="-0.9808 0.195014 -0.0"/>
+  <limit upper="3.926991" lower="3.926991" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Slider 2" type="prismatic">
+  <origin xyz="-0.004379 -0.056796 0.040499" rpy="0 0 0"/>
+  <parent link="camera-mount-slider-base.f3d_v1_1"/>
+  <child link="camera-mount-slider_1"/>
+  <axis xyz="-0.137896 -0.693531 0.707107"/>
+  <limit upper="0.02" lower="0.02" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 3" type="revolute">
+  <origin xyz="-0.006815 0.00054 0.015268" rpy="0 0 0"/>
+  <parent link="camera-mount-slider_1"/>
+  <child link="camera-mount-cam-holder_1"/>
+  <axis xyz="0.9808 -0.195014 -0.0"/>
+  <limit upper="-0.392699" lower="-0.392699" effort="100" velocity="100"/>
+</joint>
+
+</robot>

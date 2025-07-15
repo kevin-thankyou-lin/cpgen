@@ -1,0 +1,27 @@
+<mujoco model="full-mount-new">
+  <compiler angle="radian"/>
+  <asset>
+    <mesh name="base_link" file="base_link.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="camera-mount-slider-base.f3d_v1_1" file="camera-mount-slider-base.f3d_v1_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="camera-mount-slider_1" file="camera-mount-slider_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="camera-mount-cam-holder_1" file="camera-mount-cam-holder_1.stl" scale="0.001 0.001 0.001" />
+  </asset>
+  <worldbody>
+    <geom type="mesh" rgba="1 1 1 1" mesh="base_link"/>
+    <body name="camera-mount-slider-base.f3d_v1_1" pos="-0.018472 -0.05412 0.01025">
+      <inertial pos="0.00103135 -0.0178871 0.0183645" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0129541" diaginertia="2.33333e-06 2.33333e-06 2.33333e-06"/>
+      <joint name="Revolute 1" pos="0 0 0" axis="-0.9808 0.195014 0" limited="true" range="0 0.0001"/>
+      <geom pos="0.018472 0.05412 -0.01025" type="mesh" rgba="1 0 0 1" mesh="camera-mount-slider-base.f3d_v1_1" />
+      <body name="camera-mount-slider_1" pos="-0.004379 -0.056796 0.040499">
+        <inertial pos="0.00131426 0.0183 -0.00260289" quat="0.92388 0.382683 0 0" mass="0.0131416" diaginertia="2.66667e-06 2.66667e-06 2.66667e-06"/>
+        <joint name="Slider 2" pos="0 0 0" axis="-0.137896 -0.693531 0.707107" limited="true" type="slide" range="0.0 0.00001"/>
+        <geom pos="0.022851 0.110916 -0.050749" type="mesh" rgba="0 1 0 1" mesh="camera-mount-slider_1"/>
+        <body name="camera-mount-cam-holder_1" pos="-0.006815 0.00054 0.015268">
+          <inertial pos="0.00342327 -0.00585647 0.00957566" quat="0.707107 0 0 0.707107" mass="0.00813056" diaginertia="3.33333e-07 3.33333e-07 3.33333e-07"/>
+          <joint name="Revolute 3" pos="0 0 0" axis="0.9808 -0.195014 0" limited="true" range="0 0.00001"/>
+          <geom pos="0.029666 0.110376 -0.066017" type="mesh" rgba="1 0 0 1" mesh="camera-mount-cam-holder_1"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

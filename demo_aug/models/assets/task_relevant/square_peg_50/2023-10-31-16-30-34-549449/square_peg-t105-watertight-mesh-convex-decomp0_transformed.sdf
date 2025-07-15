@@ -1,0 +1,45 @@
+<?xml version='1.0'?>
+<sdf xmlns:drake="http://drake.mit.edu" version="1.8">
+  <model name='square_peg-t105-watertight-mesh-convex-decomp0_transformed'>
+    <link name='square_peg-t105-watertight-mesh-convex-decomp0_transformed'>
+      <inertial>
+        <pose>0.22971864405500916 0.10008954275910012 0.8698624740714729 0 0 0</pose>
+        <mass>0.2227668655279395</mass>
+        <inertia>
+          <ixx>0.0005110985251444029</ixx>
+          <ixy>-1.502380436702958e-07</ixy>
+          <ixz>-3.190386133721286e-06</ixz>
+          <iyy>0.0005092357924694087</iyy>
+          <iyz>1.2953030609345204e-06</iyz>
+          <izz>4.9395790124648316e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>square_peg-t105-watertight-mesh-convex-decomp0_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>square_peg-t105-watertight-mesh-convex-decomp0_transformed.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <!-- The proximity properties immediately below enable the hydroelastic
+             contact model for this body. To use point contact instead, delete
+             or comment out the <drake:rigid_hydroelastic> element. -->
+        <drake:proximity_properties>
+          <drake:mu_dynamic>0.5</drake:mu_dynamic>
+          <drake:mu_static>0.5</drake:mu_static>
+          <drake:rigid_hydroelastic/>
+        </drake:proximity_properties>
+      </collision>
+    </link>
+  </model>
+</sdf>
