@@ -79,6 +79,14 @@ from robomimic.envs.env_base import EnvBase, EnvType
 
 from demo_aug.utils.mujoco_utils import update_model_xml
 
+try:
+    import cpgen_envs as cpgen_envs
+except ImportError as e:
+    print(e)
+    print("cpgen_envs not found, cpgen_envs is not used")
+    cpgen_envs = None
+
+
 # Define default cameras to use for each env type
 DEFAULT_CAMERAS = {
     EnvType.ROBOSUITE_TYPE: ["agentview"],
