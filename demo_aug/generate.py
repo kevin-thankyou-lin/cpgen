@@ -2503,6 +2503,7 @@ class ConstraintGenerator:
 
     def generate_constraints(self) -> List[List[Constraint]]:
         constraint_sequences: List[List[Constraint]] = []
+        print("Now logging to .log file... no more print statements here!")
         for demo in tqdm(self.demos, desc="Getting constraints for source demos"):
             if demo.constraint_data_sequence is None:
                 constraint_data_lst = get_constraint_data(
