@@ -4557,6 +4557,11 @@ def main(cfg: Config):
     success_demo_save_paths = []
     fail_demo_save_paths = []
     keep_generating = True
+
+    for handler in logging.getLogger().handlers:
+        if isinstance(handler, logging.FileHandler):
+            print("Data generation logging in log file path:", handler.baseFilename)
+
     while keep_generating:
         demo = demo_generator.generate_demo(
             gen_single_stage_only=cfg.gen_single_stage_only,
