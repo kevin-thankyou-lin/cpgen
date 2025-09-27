@@ -41,7 +41,7 @@ git lfs install
 # NOTE: installing full dataset will take some time. You can install specific dataset using this GIT_LFS_SKIP_SMUDGE=1 flag:
 GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/datasets/cpgen/datasets
 # Then, you can pull specific datasets, e.g., : 
-git lfs pull -I "datasets/generated/ThreePieceAssemblyWide/
+git lfs pull -I "datasets/generated/ThreePieceAssemblyWide/"
 
 mv datasets-src/datasets cpgen
 # fetch actual data
