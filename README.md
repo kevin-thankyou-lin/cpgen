@@ -1,4 +1,7 @@
-# cpgen
+# Constraint-Preserving Data Generation for Visuomotor Policy Generalization
+
+This repo contains the official data generation code for the paper *Constraint-Preserving Data Generation for Visuomotor Policy Generalization*.
+See [adaflow-cpgen](https://github.com/kevin-thankyou-lin/adaflow-cpgen) for policy training and evaluation code.
 
 ## Installation
 
@@ -35,7 +38,11 @@ mv datasets-src/datasets cpgen/src
 # Download generated datasets
 ```bash
 git lfs install
-git clone https://huggingface.co/datasets/cpgen/datasets
+# NOTE: installing full dataset will take some time. You can install specific dataset using this GIT_LFS_SKIP_SMUDGE=1 flag:
+GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/datasets/cpgen/datasets
+# Then, you can pull specific datasets, e.g., : 
+git lfs pull -I "datasets/generated/ThreePieceAssemblyWide/
+
 mv datasets-src/datasets cpgen
 # fetch actual data
 git lfs pull <path/to/file>
