@@ -26,9 +26,19 @@ pip install -e curobo --no-build-isolation
 ```
 
 # Download source datasets
-```
+```bash
+git lfs install
 git clone https://huggingface.co/datasets/cpgen/datasets-src
+mv datasets-src/datasets cpgen/src
+```
+
+# Download generated datasets
+```bash
+git lfs install
+git clone https://huggingface.co/datasets/cpgen/datasets
 mv datasets-src/datasets cpgen
+# fetch actual data
+git lfs pull <path/to/file>
 ```
 
 # Playback dataset with actions
