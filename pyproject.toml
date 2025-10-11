@@ -35,7 +35,7 @@ dependencies = [
     "lxml",
     "trimesh",
     "usd-core",  # for curobo
-    "openai"  # for llm demo seg queries
+    "openai",  # for llm demo seg queries
     "mujoco==3.2.6"
 ]
 
