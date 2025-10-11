@@ -74,6 +74,8 @@ import robomimic.utils.file_utils as FileUtils
 import robomimic.utils.obs_utils as ObsUtils
 from robomimic.envs.env_base import EnvBase, EnvType
 
+import cpgen_envs
+
 # Define default cameras to use for each env type
 DEFAULT_CAMERAS = {
     EnvType.ROBOSUITE_TYPE: ["agentview"],
